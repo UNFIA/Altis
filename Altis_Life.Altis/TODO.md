@@ -1,3 +1,0 @@
-//
-// The mission.sqm
-//

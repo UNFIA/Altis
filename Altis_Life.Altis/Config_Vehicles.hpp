@@ -84,6 +84,8 @@ class CarShops {
         side = "med";
         vehicles[] = {
 			{ "C_SUV_01_F", { "life_mediclevel", "SCALAR", 2 } },
+            { "B_MRAP_01_F", { "life_mediclevel", "SCALAR", 2 } },
+			{ "B_MRAP_01_hmg_F", { "life_mediclevel", "SCALAR", 3 } },
 			{ "O_APC_Wheeled_02_rcws_F", { "life_mediclevel", "SCALAR", 3 } },
             { "C_Offroad_01_F", { "", "", -1 } },
             { "I_Truck_02_medical_F", { "", "", -1 } },
@@ -189,6 +191,26 @@ class LifeCfgVehicles {
         textures[] = {};
     };
 
+    class B_MRAP_01_F {
+        vItemSpace = 65;
+        licenses[] = { {""}, {""}, {""}, {""} };
+        rentalprice[] = { 50000, 50000, 50000, 50000 };
+        textures[] = {
+            { "Black", "cop", {
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
+            } },
+            { "UN", "med", {
+                "textures\B_MRAP_01_F_un_0.jpg",
+				"textures\B_MRAP_01_F_un_1.jpg"
+            } },
+            { "UN Medic", "med", {
+                "textures\B_MRAP_01_F_un_medic_0.jpg",
+				"textures\B_MRAP_01_F_un_medic_1.jpg"
+            } },
+        };
+    };
+	
     class B_MRAP_01_hmg_F {
         vItemSpace = 100;
         licenses[] = { {""}, {""}, {""}, {""} };
@@ -198,7 +220,12 @@ class LifeCfgVehicles {
                 "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
                 "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
                 "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
-            } }
+            } },
+            { "UN", "med", {
+                "textures\B_MRAP_01_F_un_0.jpg",
+				"textures\B_MRAP_01_F_un_1.jpg",
+				"#(argb,8,8,3)color(0.05,0.05,0.05,1)"
+            } },
         };
     };
 
@@ -549,18 +576,6 @@ will modify the virtual space and the price of the vehicle, but other informatio
             } },
             { "Red", "civ", {
                 "\a3\soft_f_gamma\Van_01\Data\van_01_ext_red_co.paa"
-            } }
-        };
-    };
-
-    class B_MRAP_01_F {
-        vItemSpace = 65;
-        licenses[] = { {""}, {""}, {""}, {""} };
-        rentalprice[] = { 50000, 50000, 50000, 50000 };
-        textures[] = {
-            { "Black", "cop", {
-                "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
-                "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
             } }
         };
     };

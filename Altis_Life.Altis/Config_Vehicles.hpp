@@ -709,7 +709,8 @@ will modify the virtual space and the price of the vehicle, but other informatio
         textures[] = {
             { "UN", "med", {
                 "textures\O_APC_Wheeled_02_rcws_F_0.jpg",
-                "textures\O_APC_Wheeled_02_rcws_F_1.jpg"
+                "textures\O_APC_Wheeled_02_rcws_F_1.jpg",
+				"#(argb,8,8,3)color(1,1,1,0)"
             } }
         };
     };

@@ -83,6 +83,8 @@ class CarShops {
     class med_shop {
         side = "med";
         vehicles[] = {
+			{ "C_SUV_01_F", { "life_mediclevel", "SCALAR", 2 } },
+			{ "O_APC_Wheeled_02_rcws_F", { "life_mediclevel", "SCALAR", 3 } },
             { "C_Offroad_01_F", { "", "", -1 } },
             { "I_Truck_02_medical_F", { "", "", -1 } },
             { "O_Truck_03_medical_F", { "", "", -1 } },
@@ -93,8 +95,8 @@ class CarShops {
     class med_air_hs {
         side = "med";
         vehicles[] = {
-            { "B_Heli_Light_01_F", { "", "", -1 } },
-            { "O_Heli_Light_02_unarmed_F", { "", "", -1 } }
+            { "B_Heli_Light_01_F", { "life_mediclevel", "SCALAR", 3 } },
+            { "O_Heli_Light_02_unarmed_F", { "life_mediclevel", "SCALAR", 4 } },
         };
     };
 
@@ -505,6 +507,21 @@ will modify the virtual space and the price of the vehicle, but other informatio
             { "Police", "cop", {
                 "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_02_co.paa"
             } },
+            { "CD black", "med", {
+                "textures/suv-black-un-diplomat.jpg"
+            } },
+            { "CD white", "med", {
+                "textures/suv-white-un-diplomat.jpg"
+            } },
+            { "Medic", "med", {
+                "textures/suv-white-un-medic.jpg"
+            } },
+            { "UN", "med", {
+                "textures/suv-white-un.jpg"
+            } },
+            { "White", "med", {
+                "textures/suv-white.jpg"
+            } },
         };
     };
 
@@ -606,8 +623,8 @@ will modify the virtual space and the price of the vehicle, but other informatio
             { "Digi Green", "reb", {
                 "\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_indp_co.paa"
             } },
-            { "EMS White", "med", {
-                "#(argb,8,8,3)color(1,1,1,0.8)"
+            { "Medic", "med", {
+                "textures/B_Heli_Light_01_F.jpg"
             } }
         };
     };
@@ -683,5 +700,17 @@ will modify the virtual space and the price of the vehicle, but other informatio
         licenses[] = { {"trucking"}, {""}, {""}, {""} };
         rentalprice[] = { 250000, -1, -1, -1 };
         textures[] = {};
+    };
+
+    class O_APC_Wheeled_02_rcws_F {
+        vItemSpace = 100;
+        licenses[] = { {""}, {""}, {""}, {""} };
+        rentalprice[] = { -1, 30000, -1, -1 };
+        textures[] = {
+            { "UN", "med", {
+                "textures/O_APC_Wheeled_02_rcws_F_0.jpg",
+                "textures/O_APC_Wheeled_02_rcws_F_1.jpg"
+            } }
+        };
     };
 };

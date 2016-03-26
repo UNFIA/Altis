@@ -508,19 +508,19 @@ will modify the virtual space and the price of the vehicle, but other informatio
                 "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_02_co.paa"
             } },
             { "CD black", "med", {
-                "textures/suv-black-un-diplomat.jpg"
+                "textures\suv-black-un-diplomat.jpg"
             } },
             { "CD white", "med", {
-                "textures/suv-white-un-diplomat.jpg"
+                "textures\suv-white-un-diplomat.jpg"
             } },
             { "Medic", "med", {
-                "textures/suv-white-un-medic.jpg"
+                "textures\suv-white-un-medic.jpg"
             } },
             { "UN", "med", {
-                "textures/suv-white-un.jpg"
+                "textures\suv-white-un.jpg"
             } },
             { "White", "med", {
-                "textures/suv-white.jpg"
+                "textures\suv-white.jpg"
             } },
         };
     };
@@ -624,7 +624,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
                 "\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_indp_co.paa"
             } },
             { "Medic", "med", {
-                "textures/B_Heli_Light_01_F.jpg"
+                "textures\B_Heli_Light_01_F.jpg"
             } }
         };
     };
@@ -705,11 +705,11 @@ will modify the virtual space and the price of the vehicle, but other informatio
     class O_APC_Wheeled_02_rcws_F {
         vItemSpace = 100;
         licenses[] = { {""}, {""}, {""}, {""} };
-        rentalprice[] = { -1, 30000, -1, -1 };
+        rentalprice[] = { 300000, -1, -1, -1 };
         textures[] = {
             { "UN", "med", {
-                "textures/O_APC_Wheeled_02_rcws_F_0.jpg",
-                "textures/O_APC_Wheeled_02_rcws_F_1.jpg"
+                "textures\O_APC_Wheeled_02_rcws_F_0.jpg",
+                "textures\O_APC_Wheeled_02_rcws_F_1.jpg"
             } }
         };
     };

@@ -91,7 +91,7 @@ class CarShops {
             { "I_Truck_02_medical_F", { "", "", -1 } }, // Zamak Medical
 			{ "I_Truck_02_fuel_F", { "", "", -1 } }, // Zamak Fuel
             { "O_Truck_03_medical_F", { "", "", -1 } }, // Tempest Medical
-            { "B_Truck_01_medical_F", { "", "", -1 } } // Hemtt Medical
+            { "B_Truck_01_medical_F", { "", "", -1 } }, // Hemtt Medical
 			{ "B_Truck_01_fuel_F", { "", "", -1 } } // Hemtt Fuel
         };
     };

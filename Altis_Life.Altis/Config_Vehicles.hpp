@@ -83,22 +83,25 @@ class CarShops {
     class med_shop {
         side = "med";
         vehicles[] = {
-			{ "C_SUV_01_F", { "life_mediclevel", "SCALAR", 2 } },
-            { "B_MRAP_01_F", { "life_mediclevel", "SCALAR", 2 } },
-			{ "B_MRAP_01_hmg_F", { "life_mediclevel", "SCALAR", 3 } },
-			{ "O_APC_Wheeled_02_rcws_F", { "life_mediclevel", "SCALAR", 3 } },
-            { "C_Offroad_01_F", { "", "", -1 } },
-            { "I_Truck_02_medical_F", { "", "", -1 } },
-            { "O_Truck_03_medical_F", { "", "", -1 } },
-            { "B_Truck_01_medical_F", { "", "", -1 } }
+			{ "C_SUV_01_F", { "life_mediclevel", "SCALAR", 2 } }, // SUV
+            { "B_MRAP_01_F", { "life_mediclevel", "SCALAR", 2 } }, // Hunter
+			{ "B_MRAP_01_hmg_F", { "life_mediclevel", "SCALAR", 3 } }, // Hunter HMG
+			{ "O_APC_Wheeled_02_rcws_F", { "life_mediclevel", "SCALAR", 3 } }, // Marid
+            { "C_Offroad_01_F", { "", "", -1 } }, // Offroad
+            { "I_Truck_02_medical_F", { "", "", -1 } }, // Zamak Medical
+			{ "I_Truck_02_fuel_F", { "", "", -1 } }, // Zamak Fuel
+            { "O_Truck_03_medical_F", { "", "", -1 } }, // Tempest Medical
+            { "B_Truck_01_medical_F", { "", "", -1 } } // Hemtt Medical
+			{ "B_Truck_01_fuel_F", { "", "", -1 } } // Hemtt Fuel
         };
     };
 
     class med_air_hs {
         side = "med";
         vehicles[] = {
-            { "B_Heli_Light_01_F", { "life_mediclevel", "SCALAR", 3 } },
-            { "O_Heli_Light_02_unarmed_F", { "life_mediclevel", "SCALAR", 4 } },
+			{ "O_Heli_Transport_04_fuel_F", { "life_mediclevel", "SCALAR", 2 } }, // Taru
+            { "B_Heli_Light_01_F", { "life_mediclevel", "SCALAR", 3 } }, // M900
+            { "O_Heli_Light_02_unarmed_F", { "life_mediclevel", "SCALAR", 4 } }, // Orca
         };
     };
 
@@ -162,7 +165,7 @@ class LifeCfgVehicles {
         rentalprice[] = { 50000, 50000, 50000, 50000 };
         textures[] = {};
     };
-
+	
     class O_Truck_03_medical_F {
         vItemSpace = 200;
         licenses[] = { {""}, {""}, {""}, {""} };
@@ -176,7 +179,7 @@ class LifeCfgVehicles {
         rentalprice[] = { 50000, 50000, 50000, 50000 };
         textures[] = {};
     };
-
+	
     class C_Rubberboat {
         vItemSpace = 45;
         licenses[] = { {"boat"}, {""}, {""}, {""} };
@@ -191,6 +194,20 @@ class LifeCfgVehicles {
         textures[] = {};
     };
 
+    class O_Heli_Transport_04_fuel_F {
+        vItemSpace = 100;
+		vFuelSpace = 60000;
+        licenses[] = { {""}, {"cAir"}, {""}, {""} };
+        rentalprice[] = { 50000, 50000, 50000, 50000 };
+        textures[] = {
+            { "UN Water", "med", {
+				"textures\vehicles\air\UN\TARU_O_Heli_Transport_04_fuel_F_0.jpg",
+				"textures\vehicles\air\UN\TARU_O_Heli_Transport_04_fuel_F_1.jpg",
+				"textures\vehicles\air\UN\TARU_O_Heli_Transport_04_fuel_F_2.jpg"
+            } }
+        };
+    };
+	
     class B_MRAP_01_F {
         vItemSpace = 65;
         licenses[] = { {""}, {""}, {""}, {""} };
@@ -201,12 +218,12 @@ class LifeCfgVehicles {
                 "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
             } },
             { "UN", "med", {
-                "textures\B_MRAP_01_F_un_0.jpg",
-				"textures\B_MRAP_01_F_un_1.jpg"
+                "textures\vehicles\land\UN\B_MRAP_01_F_un_0.jpg",
+				"textures\vehicles\land\UN\B_MRAP_01_F_un_1.jpg"
             } },
             { "UN Medic", "med", {
-                "textures\B_MRAP_01_F_un_medic_0.jpg",
-				"textures\B_MRAP_01_F_un_medic_1.jpg"
+                "textures\vehicles\land\UN\B_MRAP_01_F_un_medic_0.jpg",
+				"textures\vehicles\land\UN\B_MRAP_01_F_un_medic_1.jpg"
             } },
         };
     };
@@ -222,8 +239,8 @@ class LifeCfgVehicles {
                 "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
             } },
             { "UN", "med", {
-                "textures\B_MRAP_01_F_un_0.jpg",
-				"textures\B_MRAP_01_F_un_1.jpg",
+                "textures\vehicles\land\UN\B_MRAP_01_F_un_0.jpg",
+				"textures\vehicles\land\UN\B_MRAP_01_F_un_1.jpg",
 				"#(argb,8,8,3)color(0.05,0.05,0.05,1)"
             } },
         };
@@ -535,19 +552,19 @@ will modify the virtual space and the price of the vehicle, but other informatio
                 "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_02_co.paa"
             } },
             { "CD black", "med", {
-                "textures\suv-black-un-diplomat.jpg"
+                "textures\vehicles\land\UN\suv-black-un-diplomat.jpg"
             } },
             { "CD white", "med", {
-                "textures\suv-white-un-diplomat.jpg"
+                "textures\vehicles\land\UN\suv-white-un-diplomat.jpg"
             } },
-            { "Medic", "med", {
-                "textures\suv-white-un-medic.jpg"
+            { "RED CROSS", "med", {
+                "textures\vehicles\land\UN\suv-white-un-medic.jpg"
             } },
             { "UN", "med", {
-                "textures\suv-white-un.jpg"
+                "textures\vehicles\land\UN\suv-white-un.jpg"
             } },
-            { "White", "med", {
-                "textures\suv-white.jpg"
+            { "Unmarked", "med", {
+                "textures\vehicles\land\UN\suv-white.jpg"
             } },
         };
     };
@@ -639,7 +656,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
                 "\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_indp_co.paa"
             } },
             { "Medic", "med", {
-                "textures\B_Heli_Light_01_F.jpg"
+                "textures\vehicles\air\UN\B_Heli_Light_01_F.jpg"
             } }
         };
     };
@@ -705,6 +722,10 @@ will modify the virtual space and the price of the vehicle, but other informatio
             { "White", "civ", {
                 "\A3\Soft_F_Beta\Truck_02\data\truck_02_kab_co.paa",
                 "\A3\Soft_F_Beta\Truck_02\data\truck_02_fuel_co.paa"
+            } },
+            { "UN Water", "med", {
+                "textures\vehicles\land\UN\ZAMAK_I_Truck_02_fuel_F_0.jpg",
+				"textures\vehicles\land\UN\ZAMAK_I_Truck_02_fuel_F_1.jpg"
             } }
         };
     };
@@ -714,17 +735,23 @@ will modify the virtual space and the price of the vehicle, but other informatio
         vFuelSpace = 50000;
         licenses[] = { {"trucking"}, {""}, {""}, {""} };
         rentalprice[] = { 50000, 50000, 50000, 50000 };
-        textures[] = {};
+        textures[] = {
+			{ "UN Water", "med", {
+                "textures\vehicles\land\UN\HEMTT_B_Truck_01_layer_0.jpg",
+				"textures\vehicles\land\UN\HEMTT_B_Truck_01_layer_1.jpg",
+				"#(argb,8,8,3)color(1,1,1,0.8)"
+            } }			
+		};
     };
-
+	
     class O_APC_Wheeled_02_rcws_F {
         vItemSpace = 100;
         licenses[] = { {""}, {""}, {""}, {""} };
         rentalprice[] = { 50000, 50000, 50000, 50000 };
         textures[] = {
             { "UN", "med", {
-                "textures\O_APC_Wheeled_02_rcws_F_0.jpg",
-                "textures\O_APC_Wheeled_02_rcws_F_1.jpg",
+                "textures\vehicles\land\UN\MARID_O_APC_Wheeled_02_rcws_F_0.jpg",
+                "textures\vehicles\land\UN\MARID_O_APC_Wheeled_02_rcws_F_1.jpg",
 				"#(argb,8,8,3)color(1,1,1,0)"
             } }
         };

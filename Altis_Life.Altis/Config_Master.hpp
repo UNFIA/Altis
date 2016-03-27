@@ -118,14 +118,14 @@ class Life_Settings {
     impound_air = 850; //Price for impounding helicopters / planes
 
     /* Initial Bank Amount */
-    bank_cop = 7000; //Amount of cash on bank for new cops
-    bank_civ = 3000; //Amount of cash on bank for new civillians
-    bank_med = 6500; //Amount of cash on bank for new medics
+    bank_cop = 700000; //Amount of cash on bank for new cops
+    bank_civ = 700000; //Amount of cash on bank for new civillians
+    bank_med = 700000; //Amount of cash on bank for new medics
 
     /* Paycheck Amount */
-    paycheck_cop = 500; //Payment for cops
-    paycheck_civ = 350; //Payment for civillians
-    paycheck_med = 450; //Payment for medics
+    paycheck_cop = 5000; //Payment for cops
+    paycheck_civ = 50; //Payment for civillians
+    paycheck_med = 9000; //Payment for medics
 
     /* Federal Reserve settings */
     noatm_timer = 10; //Time in minutes that players won't be able to deposit his money after selling stolen gold

@@ -6,36 +6,98 @@
 */
 class Life_Settings {
     /* Persistent Player Settings */
-    save_civ_weapons = false; //Allow civilians to save weapons on them?
+    save_civ_weapons = true; //Allow civilians to save weapons on them?
     save_virtualItems = true; //Save Virtual items (all sides)?
     save_playerStats = true; //Save food, water and damage (all sides)?
     save_civ_position = true; //Save civilian location?
     save_civ_positionStrict = false; //Strip the player if possible combat-log?  WARNING: Server crashes and lack of reliable syncing can trigger this.
 
     /* Persistent Vehicle Settings */
-    save_veh_virtualItems = false; //Save Virtual items for vehicles (all sides)?
-    save_veh_gear = false; //Save Gear for vehicles (all sides)?
-    save_veh_fuel = false; //Save Vehicle fuel state
-    save_veh_damage = false; //Save Vehicle Damage
-    save_veh_items[] = { "pickaxe","fuelEmpty","fuelFull", "spikeStrip", "lockpick", "defuseKit","storageSmall","storageBig","redgull","coffee","waterBottle","apple","peach","tbacon","donuts","rabbit","salema","ornate","mackerel","tuna","mullet","catshark","turtle_soup","hen","rooster","sheep","goat" };
+    save_veh_virtualItems = true; //Save Virtual items for vehicles (all sides)?
+    save_veh_gear = true; //Save Gear for vehicles (all sides)?
+    save_veh_fuel = true; //Save Vehicle fuel state
+    save_veh_damage = true; //Save Vehicle Damage
+
+    save_veh_items[] = {
+		"pickaxe",
+		"fuelEmpty",
+		"fuelFull",
+		"spikeStrip",
+		"lockpick",
+		"defuseKit",
+		"storageSmall",
+		"storageBig",
+		"redgull",
+		"coffee",
+		"waterBottle",
+		"apple",
+		"peach",
+		"tbacon",
+		"donuts",
+		"rabbit",
+		"salema",
+		"ornate",
+		"mackerel",
+		"tuna",
+		"mullet",
+		"catshark",
+		"turtle_soup",
+		"hen",
+		"rooster",
+		"sheep",
+		"goat"
+	};
 
     /* Clothing related settings */
     clothing_noTP = false;  //Disable clothing preview teleport? (true = no teleport. false = teleport)
     clothing_box = true; //true = teleport to a black box. false = teleport to somewhere on map. (It only affects the game if clothing_noTP is set as false)
-    clothing_masks[] = { "H_Shemag_olive", "H_Shemag_khk", "H_Shemag_tan", "H_Shemag_olive_hs", "H_ShemagOpen_khk", "H_ShemagOpen_tan", "G_Balaclava_blk", "G_Balaclava_combat", "G_Balaclava_lowprofile", "G_Balaclava_oli", "G_Bandanna_aviator", "G_Bandanna_beast", "G_Bandanna_blk", "G_Bandanna_khk", "G_Bandanna_oli", "G_Bandanna_shades", "G_Bandanna_sport", "G_Bandanna_tan", "U_O_GhillieSuit", "U_I_GhillieSuit", "U_B_GhillieSuit", "H_RacingHelmet_1_black_F", "H_RacingHelmet_1_red_F", "H_RacingHelmet_1_white_F", "H_RacingHelmet_1_blue_F", "H_RacingHelmet_1_yellow_F", "H_RacingHelmet_1_green_F", "H_RacingHelmet_1_F", "H_RacingHelmet_2_F", "H_RacingHelmet_3_F", "H_RacingHelmet_4_F" };
+	
+    clothing_masks[] = {
+		"H_Shemag_olive",
+		"H_Shemag_khk",
+		"H_Shemag_tan",
+		"H_Shemag_olive_hs",
+		"H_ShemagOpen_khk",
+		"H_ShemagOpen_tan",
+		"G_Balaclava_blk",
+		"G_Balaclava_combat",
+		"G_Balaclava_lowprofile",
+		"G_Balaclava_oli",
+		"G_Bandanna_aviator",
+		"G_Bandanna_beast",
+		"G_Bandanna_blk",
+		"G_Bandanna_khk",
+		"G_Bandanna_oli",
+		"G_Bandanna_shades",
+		"G_Bandanna_sport",
+		"G_Bandanna_tan",
+		"U_O_GhillieSuit",
+		"U_I_GhillieSuit",
+		"U_B_GhillieSuit",
+		"H_RacingHelmet_1_black_F",
+		"H_RacingHelmet_1_red_F",
+		"H_RacingHelmet_1_white_F",
+		"H_RacingHelmet_1_blue_F",
+		"H_RacingHelmet_1_yellow_F",
+		"H_RacingHelmet_1_green_F",
+		"H_RacingHelmet_1_F",
+		"H_RacingHelmet_2_F",
+		"H_RacingHelmet_3_F",
+		"H_RacingHelmet_4_F"
+	};
 
     /* Cop related settings */
-    cops_online_min = 5; //minimum cops online for robbing a bank
+    cops_online_min = 2; //minimum cops online for robbing a bank
 
     /* Medic related settings*/
     allow_medic_weapons = true; // true allows medics to hold/use weapons - false disallows
 
     /* Revive system settings */
-    revive_cops = true; //true to enable cops the ability to revive everyone or false for only medics/ems.
-    revive_fee = 1500; //Revive fee that players have to pay and medics / EMS are rewarded
+    revive_cops = false; //true to enable cops the ability to revive everyone or false for only medics/ems.
+    revive_fee = 100000; //Revive fee that players have to pay and medics / EMS are rewarded
 
     /* House related settings */
-    house_limit = 5; //Maximum amount of houses a player can own.
+    house_limit = 2; //Maximum amount of houses a player can own.
 
     /* Donor related settings */
     donor_level = false; //Enable the donor level set in database (var = life_donorlevel; levels = 0,1,2,3,4,5). ATTENTION! Before enabling, read: https://www.bistudio.com/community/game-content-usage-rules
@@ -75,15 +137,18 @@ class Life_Settings {
     global_ATM = true; //Allow users to access any ATM on the map.
 
     /* Fuel Station & Heli Service settings */
-    Pump_service = false; //Allow users to use pump service on the map. Default = false
+    Pump_service = true; //Allow users to use pump service on the map. Default = false
     fuel_cost = 80; //Cost of fuel per liter at fuel stations (if not defined for the vehicle already).
     service_chopper = 1000; //Cost to service chopper at chopper service station.
 
     /* Skins settings */
-    civ_skins = false; //Enable or disable civilian skins. Before enabling, you must add all the SEVEN files to textures folder. (It must be named as: civilian_uniform_1.jpg, civilian_uniform_2.jpg...civilian_uniform_6.jpg, civilian_uniform_7.jpg)
+	// Enable or disable civilian skins.
+	// Before enabling, you must add all the SEVEN files to textures folder.
+	// (It must be named as: civilian_uniform_1.jpg, civilian_uniform_2.jpg...civilian_uniform_6.jpg, civilian_uniform_7.jpg)
+    civ_skins = true; 
 
     /* Vehicle Settings */
-    vehicleShop_rentalOnly[] = { "B_MRAP_01_hmg_F", "B_G_Offroad_01_armed_F", "B_Boat_Armed_01_minigun_F" };
+    // vehicleShop_rentalOnly[] = { "B_MRAP_01_hmg_F", "B_G_Offroad_01_armed_F", "B_Boat_Armed_01_minigun_F" };
     vehicleShop_BuyMultiplicator = 1.5;
     vehicleGarage_SellMultiplicator = 0.75;
     vehicleGarage_StorFeeMultiplicator = 0.2;
